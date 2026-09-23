@@ -1,0 +1,81 @@
+{
+  "meta": {
+    "version": "1.0",
+    "resource": "equipment",
+    "futureApi": "/api/v1/equipment"
+  },
+  "items": [
+    {
+      "id": "ME-EXC-001",
+      "slug": "pelle-hydraulique-22t",
+      "name": "Pelle hydraulique 22T",
+      "category": "Terrassement",
+      "status": "available",
+      "statusLabel": "Disponible",
+      "capacity": "22 tonnes",
+      "use": "Excavation, fouilles et terrassement",
+      "image": "https://images.unsplash.com/photo-1580901368919-7738efb0f87e?auto=format&fit=crop&w=1200&q=85",
+      "featured": true
+    },
+    {
+      "id": "ME-CHG-002",
+      "slug": "chargeuse-sur-pneus",
+      "name": "Chargeuse sur pneus",
+      "category": "Manutention",
+      "status": "available",
+      "statusLabel": "Disponible",
+      "capacity": "Godet grande capacité",
+      "use": "Chargement et déplacement de matériaux",
+      "image": "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1200&q=85",
+      "featured": true
+    },
+    {
+      "id": "ME-BUL-003",
+      "slug": "bulldozer",
+      "name": "Bulldozer",
+      "category": "Terrassement",
+      "status": "on-request",
+      "statusLabel": "Sur demande",
+      "capacity": "Travaux lourds",
+      "use": "Nivellement et préparation de terrain",
+      "image": "https://images.unsplash.com/photo-1579847188804-ecba0e2ea330?auto=format&fit=crop&w=1200&q=85",
+      "featured": true
+    },
+    {
+      "id": "ME-GRU-004",
+      "slug": "grue-mobile",
+      "name": "Grue mobile",
+      "category": "Levage",
+      "status": "available",
+      "statusLabel": "Disponible",
+      "capacity": "Levage chantier",
+      "use": "Levage et manutention de charges",
+      "image": "https://images.unsplash.com/photo-1517089596392-fb9a9033e05b?auto=format&fit=crop&w=1200&q=85",
+      "featured": false
+    },
+    {
+      "id": "ME-CAM-005",
+      "slug": "camion-benne",
+      "name": "Camion benne",
+      "category": "Transport",
+      "status": "available",
+      "statusLabel": "Disponible",
+      "capacity": "Transport chantier",
+      "use": "Transport de matériaux et déblais",
+      "image": "https://images.unsplash.com/photo-1586191582151-f73872dfd183?auto=format&fit=crop&w=1200&q=85",
+      "featured": false
+    },
+    {
+      "id": "ME-PRT-006",
+      "slug": "porte-engin",
+      "name": "Porte-engin",
+      "category": "Transport",
+      "status": "on-request",
+      "statusLabel": "Sur demande",
+      "capacity": "Convoi d'engins",
+      "use": "Acheminement d'engins de chantier",
+      "image": "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1200&q=85",
+      "featured": true
+    }
+  ]
+}
