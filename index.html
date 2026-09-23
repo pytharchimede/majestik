@@ -1,243 +1,480 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Majestik Envol connecte clients, artisans, prestataires, fournisseurs et propriétaires d’engins du BTP.">
-  <title>Majestik Envol</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
-  <header class="site-header" id="top">
-    <div class="container nav-wrap">
-      <a class="brand" href="#top" aria-label="Majestik Envol">
-        <div class="brand-mark">M</div>
-        <div>
-          <strong>MAJESTIK ENVOL</strong>
-          <span>Le hub des services BTP</span>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Majestik Envol connecte clients, artisans, prestataires, fournisseurs et propriétaires d’engins du BTP."
+    />
+    <title>Majestik Envol</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header class="site-header" id="top">
+      <div class="container nav-wrap">
+        <a class="brand" href="#top" aria-label="Majestik Envol">
+          <div class="brand-mark">M</div>
+          <div>
+            <strong>MAJESTIK ENVOL</strong>
+            <span>Le hub des services BTP</span>
+          </div>
+        </a>
+        <div class="header-actions">
+          <button
+            class="quick-search-trigger"
+            type="button"
+            data-quick-search-open
+            aria-label="Recherche rapide"
+          >
+            ⌕ <span>Rechercher</span><kbd>/</kbd></button
+          ><button
+            class="menu-toggle"
+            aria-label="Ouvrir le menu"
+            aria-expanded="false"
+          >
+            ☰
+          </button>
         </div>
-      </a>
-      <div class="header-actions"><button class="quick-search-trigger" type="button" data-quick-search-open aria-label="Recherche rapide">⌕ <span>Rechercher</span><kbd>/</kbd></button><button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false">☰</button></div>
-      <nav class="main-nav">
-        <a href="#marketplace">Trouver</a>
-        <a href="#services">Univers BTP</a>
-        <a href="#apropos">À propos</a>
-        <a href="#parc">Parc engins</a>
-        <a href="#avantages">Pourquoi nous</a>
-        <a href="#contact" class="nav-cta">Nous contacter</a>
-      </nav>
+        <nav class="main-nav">
+          <a href="#marketplace">Trouver</a>
+          <a href="#services">Univers BTP</a>
+          <a href="#apropos">À propos</a>
+          <a href="#parc">Parc engins</a>
+          <a href="#avantages">Pourquoi nous</a>
+          <a href="#contact" class="nav-cta">Nous contacter</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="quick-search" data-quick-search hidden>
+      <div class="quick-search-backdrop" data-quick-search-close></div>
+      <section
+        class="quick-search-panel"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Recherche générale"
+      >
+        <div class="quick-search-input">
+          <span>⌕</span
+          ><input
+            type="search"
+            data-quick-search-input
+            placeholder="Maçon, ciment, pelle, plomberie…"
+            autocomplete="off"
+            aria-label="Recherche générale"
+          /><button type="button" data-quick-search-close aria-label="Fermer">
+            ×
+          </button>
+        </div>
+        <div class="quick-search-meta">
+          <span>Recherche dans tout le réseau Majestik</span><kbd>ESC</kbd>
+        </div>
+        <div
+          class="quick-search-results"
+          data-quick-search-results
+          aria-live="polite"
+        >
+          <p>Commencez à saisir votre besoin.</p>
+        </div>
+      </section>
     </div>
-  </header>
 
-  <div class="quick-search" data-quick-search hidden><div class="quick-search-backdrop" data-quick-search-close></div><section class="quick-search-panel" role="dialog" aria-modal="true" aria-label="Recherche générale"><div class="quick-search-input"><span>⌕</span><input type="search" data-quick-search-input placeholder="Maçon, ciment, pelle, plomberie…" autocomplete="off" aria-label="Recherche générale"><button type="button" data-quick-search-close aria-label="Fermer">×</button></div><div class="quick-search-meta"><span>Recherche dans tout le réseau Majestik</span><kbd>ESC</kbd></div><div class="quick-search-results" data-quick-search-results aria-live="polite"><p>Commencez à saisir votre besoin.</p></div></section></div>
-
-  <main>
-    <section class="hero">
-      <div class="hero-bg"></div>
-      <div class="container hero-grid">
-        <div class="hero-copy reveal">
-          <span class="eyebrow">Le réseau BTP qui rapproche les besoins et les savoir-faire</span>
-          <h1>Tout le BTP. <span>Au même endroit.</span></h1>
-          <p>Trouvez des artisans, prestataires, fournisseurs et engins pour vos travaux. Majestik Envol organise la mise en relation et vous accompagne jusqu’à la réalisation.</p>
-          <div class="hero-actions">
-            <a href="#marketplace" class="btn btn-primary">Trouver maintenant</a>
-            <a href="#partenaire" class="btn btn-secondary">Devenir partenaire</a>
+    <main>
+      <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="container hero-grid">
+          <div class="hero-copy reveal">
+            <span class="eyebrow"
+              >Le réseau BTP qui rapproche les besoins et les savoir-faire</span
+            >
+            <h1>Tout le BTP. <span>Au même endroit.</span></h1>
+            <p>
+              Trouvez des artisans, prestataires, fournisseurs et engins pour
+              vos travaux. Majestik Envol organise la mise en relation et vous
+              accompagne jusqu’à la réalisation.
+            </p>
+            <div class="hero-actions">
+              <a href="#marketplace" class="btn btn-primary"
+                >Trouver maintenant</a
+              >
+              <a href="#partenaire" class="btn btn-secondary"
+                >Devenir partenaire</a
+              >
+            </div>
+            <div class="hero-trust">
+              <div><strong>Réseau</strong><span>Acteurs du BTP</span></div>
+              <div>
+                <strong>Vérification</strong><span>Partenaires référencés</span>
+              </div>
+              <div>
+                <strong>Suivi</strong><span>Majestik vous accompagne</span>
+              </div>
+            </div>
           </div>
-          <div class="hero-trust">
-            <div><strong>Réseau</strong><span>Acteurs du BTP</span></div>
-            <div><strong>Vérification</strong><span>Partenaires référencés</span></div>
-            <div><strong>Suivi</strong><span>Majestik vous accompagne</span></div>
-          </div>
-        </div>
-        <div class="hero-card reveal">
-          <div class="hero-card-top">QUE RECHERCHEZ-VOUS ?</div>
-          <div class="hero-card-list">
-            <button type="button" data-market-shortcut="prestataire">Un artisan / prestataire</button>
-            <button type="button" data-market-shortcut="matériau">Des matériaux</button>
-            <button type="button" data-market-shortcut="engin">Un engin de chantier</button>
-          </div>
-          <div class="hero-card-accent"></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section marketplace" id="marketplace" data-marketplace>
-      <div class="container">
-        <div class="market-head reveal">
-          <span class="eyebrow">Marketplace BTP</span>
-          <h2>De quoi avez-vous besoin aujourd’hui ?</h2>
-          <p>Recherchez dans le réseau Majestik : compétences, matériaux et équipements.</p>
-        </div>
-        <div class="market-searchbox">
-          <select data-market-type aria-label="Type de besoin"><option value="all">Tout le réseau</option><option value="prestataire">Prestataires</option><option value="matériau">Matériaux</option><option value="engin">Engins</option></select>
-          <input type="search" data-market-search placeholder="Ex. maçon, ciment, pelle, soudure…" aria-label="Rechercher">
-          <a href="#demande" class="market-search-btn">Décrire mon besoin</a>
-        </div>
-        <div class="market-hint" data-market-hint>Chargement du réseau…</div>
-        <div class="market-results" data-market-results aria-live="polite"></div>
-      </div>
-    </section>
-
-    <section class="section intro" id="apropos">
-      <div class="container split">
-        <div class="section-heading reveal">
-          <span class="eyebrow">Majestik Envol</span>
-          <h2>Majestik crée le lien entre le terrain et vos projets.</h2>
-        </div>
-        <div class="intro-copy reveal">
-          <p>Nous mettons à disposition des professionnels et porteurs de projets des solutions adaptées pour l’approvisionnement, la logistique et la location d’équipements.</p>
-          <p>Notre priorité : vous aider à gagner du temps avec des produits de qualité, des prix compétitifs et un accompagnement direct.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section services" id="services">
-      <div class="container">
-        <div class="section-heading center reveal">
-          <span class="eyebrow">Nos services</span>
-          <h2>Tout ce qu’il faut pour faire avancer vos projets.</h2>
-          <p>Une offre pensée pour les besoins quotidiens du BTP et de la logistique.</p>
-        </div>
-        <div class="service-grid">
-          <article class="service-card reveal">
-            <div class="service-icon">01</div>
-            <h3>Fer à béton</h3>
-            <p>Approvisionnement pour ouvrages, fondations et structures béton armé.</p>
-          </article>
-          <article class="service-card reveal">
-            <div class="service-icon">02</div>
-            <h3>Ciment</h3>
-            <p>Ciment pour construction, maçonnerie et travaux de gros œuvre.</p>
-          </article>
-          <article class="service-card reveal">
-            <div class="service-icon">03</div>
-            <h3>Logistique</h3>
-            <p>Organisation et acheminement de vos matériaux et équipements.</p>
-          </article>
-          <article class="service-card reveal">
-            <div class="service-icon">04</div>
-            <h3>Quincaillerie</h3>
-            <p>Fournitures et accessoires indispensables à vos opérations terrain.</p>
-          </article>
-          <article class="service-card reveal">
-            <div class="service-icon">05</div>
-            <h3>Location de matériel</h3>
-            <p>Des équipements adaptés aux besoins ponctuels ou réguliers de chantier.</p>
-          </article>
-          <article class="service-card reveal">
-            <div class="service-icon">06</div>
-            <h3>Porte-engin</h3>
-            <p>Solutions de transport pour engins lourds et matériel de chantier.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section fleet-section" id="parc" data-fleet>
-      <div class="container">
-        <div class="section-heading center reveal">
-          <span class="eyebrow">Parc engins</span>
-          <h2>Explorez nos équipements.</h2>
-          <p>Recherchez, filtrez et consultez les équipements disponibles. Cette interface est déjà structurée pour être raccordée à une future API.</p>
-        </div>
-        <div class="fleet-toolbar">
-          <div class="fleet-filters" data-fleet-filters aria-label="Filtrer le parc"></div>
-          <label class="fleet-search"><input type="search" data-fleet-search placeholder="Rechercher un engin…" aria-label="Rechercher un engin"></label>
-        </div>
-        <div class="fleet-summary"><span data-fleet-count>Chargement du parc…</span><span>Données JSON · Catalogue dynamique</span></div>
-        <div class="fleet-grid" data-fleet-grid aria-live="polite"></div>
-      </div>
-    </section>
-
-    <section class="section showcase">
-      <div class="container showcase-grid">
-        <div class="showcase-photo reveal">
-          <div class="photo-overlay">
-            <span>Approvisionnement</span>
-            <h3>Les bons matériaux, au bon moment.</h3>
+          <div class="hero-card reveal">
+            <div class="hero-card-top">QUE RECHERCHEZ-VOUS ?</div>
+            <div class="hero-card-list">
+              <button type="button" data-market-shortcut="prestataire">
+                Un artisan / prestataire
+              </button>
+              <button type="button" data-market-shortcut="matériau">
+                Des matériaux
+              </button>
+              <button type="button" data-market-shortcut="engin">
+                Un engin de chantier
+              </button>
+            </div>
+            <div class="hero-card-accent"></div>
           </div>
         </div>
-        <div class="showcase-copy reveal">
-          <span class="eyebrow">Performance terrain</span>
-          <h2>Une offre construite autour de vos délais.</h2>
-          <p>Majestik Envol centralise plusieurs besoins essentiels afin de simplifier vos achats et vos opérations logistiques.</p>
-          <ul class="check-list">
-            <li>Disponibilité et sélection de produits utiles</li>
-            <li>Solutions adaptées aux contraintes des chantiers</li>
-            <li>Interlocuteur unique pour gagner en efficacité</li>
-          </ul>
-          <a href="#contact" class="text-link">Parler à notre équipe →</a>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="section request-section" id="demande">
-      <div class="container request-grid">
-        <div class="request-copy"><span class="eyebrow">Demande Majestik</span><h2>Décrivez le besoin. Nous préparons la mise en relation.</h2><p>Cette première version fonctionne sans base de données. Le formulaire construit déjà le futur objet API.</p></div>
-        <form class="request-form" data-request-form>
-          <label>Besoin<input name="need" required placeholder="Ex. maçon pour rénovation"></label>
-          <div class="form-row"><label>Catégorie<select name="category" required><option value="prestataire">Prestataire</option><option value="matériau">Matériau</option><option value="engin">Engin</option></select></label><label>Zone<input name="location" required placeholder="Ex. Cocody"></label></div>
-          <div class="form-row"><label>Date souhaitée<input type="date" name="date"></label><label>Budget indicatif<input name="budget" placeholder="Ex. 250 000 FCFA"></label></div>
-          <label>Détails<textarea name="details" rows="4" placeholder="Quantité, dimensions, contraintes du chantier…"></textarea></label>
-          <label>Contact<input name="contact" required placeholder="Téléphone / WhatsApp"></label>
-          <button class="btn btn-primary" type="submit">Préparer ma demande</button>
-          <div class="request-output" data-request-output hidden></div>
-        </form>
-      </div>
-    </section>
-    <section class="partner-section" id="partenaire">
-      <div class="container partner-box"><div><span class="eyebrow light">Vous travaillez dans le BTP ?</span><h2>Rejoignez le réseau Majestik.</h2><p>Artisans, équipes terrain, fournisseurs, transporteurs et propriétaires d’engins peuvent rejoindre progressivement notre réseau de partenaires.</p></div><a class="btn btn-light" href="#contact">Devenir partenaire</a></div>
-    </section>
-
-    <section class="section advantages" id="avantages">
-      <div class="container">
-        <div class="section-heading center reveal">
-          <span class="eyebrow">Pourquoi Majestik Envol</span>
-          <h2>Une approche professionnelle, claire et efficace.</h2>
+      <section class="section marketplace" id="marketplace" data-marketplace>
+        <div class="container">
+          <div class="market-head reveal">
+            <span class="eyebrow">Marketplace BTP</span>
+            <h2>De quoi avez-vous besoin aujourd’hui ?</h2>
+            <p>
+              Recherchez dans le réseau Majestik : compétences, matériaux et
+              équipements.
+            </p>
+          </div>
+          <div class="market-searchbox">
+            <select data-market-type aria-label="Type de besoin">
+              <option value="all">Tout le réseau</option>
+              <option value="prestataire">Prestataires</option>
+              <option value="matériau">Matériaux</option>
+              <option value="engin">Engins</option>
+            </select>
+            <input
+              type="search"
+              data-market-search
+              placeholder="Ex. maçon, ciment, pelle, soudure…"
+              aria-label="Rechercher"
+            />
+            <a href="#demande" class="market-search-btn">Décrire mon besoin</a>
+          </div>
+          <div class="market-hint" data-market-hint>Chargement du réseau…</div>
+          <div
+            class="market-results"
+            data-market-results
+            aria-live="polite"
+          ></div>
         </div>
-        <div class="adv-grid">
-          <div class="adv-card reveal"><strong>01</strong><h3>Qualité</h3><p>Une sélection attentive des matériaux et services proposés.</p></div>
-          <div class="adv-card reveal"><strong>02</strong><h3>Prix compétitifs</h3><p>Une recherche constante du bon rapport qualité-prix.</p></div>
-          <div class="adv-card reveal"><strong>03</strong><h3>Proximité</h3><p>Des échanges directs et un accompagnement simple.</p></div>
-          <div class="adv-card reveal"><strong>04</strong><h3>Souplesse</h3><p>Des solutions adaptées à la taille et au rythme de vos projets.</p></div>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="contact-section" id="contact">
-      <div class="container contact-grid">
-        <div class="contact-copy reveal">
-          <span class="eyebrow light">Un besoin ?</span>
-          <h2>Parlons de votre prochain chantier.</h2>
-          <p>Contactez Majestik Envol pour vos besoins en matériaux, logistique, quincaillerie ou location.</p>
+      <section class="section intro" id="apropos">
+        <div class="container split">
+          <div class="section-heading reveal">
+            <span class="eyebrow">Majestik Envol</span>
+            <h2>Majestik crée le lien entre le terrain et vos projets.</h2>
+          </div>
+          <div class="intro-copy reveal">
+            <p>
+              Nous mettons à disposition des professionnels et porteurs de
+              projets des solutions adaptées pour l’approvisionnement, la
+              logistique et la location d’équipements.
+            </p>
+            <p>
+              Notre priorité : vous aider à gagner du temps avec des produits de
+              qualité, des prix compétitifs et un accompagnement direct.
+            </p>
+          </div>
         </div>
-        <div class="contact-card reveal">
-          <a href="tel:+2250708202226">+225 07 08 20 22 26</a>
-          <a href="tel:+2250708203010">+225 07 08 20 30 10</a>
-          <a href="tel:+2250544577666">+225 05 44 57 76 66</a>
-          <a class="btn btn-light" href="https://wa.me/2250708202226" target="_blank" rel="noopener">Écrire sur WhatsApp</a>
+      </section>
+
+      <section class="section services" id="services">
+        <div class="container">
+          <div class="section-heading center reveal">
+            <span class="eyebrow">Nos services</span>
+            <h2>Tout ce qu’il faut pour faire avancer vos projets.</h2>
+            <p>
+              Une offre pensée pour les besoins quotidiens du BTP et de la
+              logistique.
+            </p>
+          </div>
+          <div class="service-grid">
+            <article class="service-card reveal">
+              <div class="service-icon">01</div>
+              <h3>Fer à béton</h3>
+              <p>
+                Approvisionnement pour ouvrages, fondations et structures béton
+                armé.
+              </p>
+            </article>
+            <article class="service-card reveal">
+              <div class="service-icon">02</div>
+              <h3>Ciment</h3>
+              <p>
+                Ciment pour construction, maçonnerie et travaux de gros œuvre.
+              </p>
+            </article>
+            <article class="service-card reveal">
+              <div class="service-icon">03</div>
+              <h3>Logistique</h3>
+              <p>
+                Organisation et acheminement de vos matériaux et équipements.
+              </p>
+            </article>
+            <article class="service-card reveal">
+              <div class="service-icon">04</div>
+              <h3>Quincaillerie</h3>
+              <p>
+                Fournitures et accessoires indispensables à vos opérations
+                terrain.
+              </p>
+            </article>
+            <article class="service-card reveal">
+              <div class="service-icon">05</div>
+              <h3>Location de matériel</h3>
+              <p>
+                Des équipements adaptés aux besoins ponctuels ou réguliers de
+                chantier.
+              </p>
+            </article>
+            <article class="service-card reveal">
+              <div class="service-icon">06</div>
+              <h3>Porte-engin</h3>
+              <p>
+                Solutions de transport pour engins lourds et matériel de
+                chantier.
+              </p>
+            </article>
+          </div>
         </div>
-      </div>
-    </section>
-  </main>
+      </section>
 
-  <div class="fleet-modal" data-fleet-modal hidden role="dialog" aria-modal="true" aria-label="Détail de l’engin"><div class="fleet-dialog"><button type="button" class="fleet-close" data-modal-close aria-label="Fermer">×</button><div data-modal-content></div></div></div>
+      <section class="section fleet-section" id="parc" data-fleet>
+        <div class="container">
+          <div class="section-heading center reveal">
+            <span class="eyebrow">Parc engins</span>
+            <h2>Explorez nos équipements.</h2>
+            <p>
+              Recherchez, filtrez et consultez les équipements disponibles.
+              Cette interface est déjà structurée pour être raccordée à une
+              future API.
+            </p>
+          </div>
+          <div class="fleet-toolbar">
+            <div
+              class="fleet-filters"
+              data-fleet-filters
+              aria-label="Filtrer le parc"
+            ></div>
+            <label class="fleet-search"
+              ><input
+                type="search"
+                data-fleet-search
+                placeholder="Rechercher un engin…"
+                aria-label="Rechercher un engin"
+            /></label>
+          </div>
+          <div class="fleet-summary">
+            <span data-fleet-count>Chargement du parc…</span
+            ><span>Données JSON · Catalogue dynamique</span>
+          </div>
+          <div class="fleet-grid" data-fleet-grid aria-live="polite"></div>
+        </div>
+      </section>
 
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div class="brand footer-brand">
-        <div class="brand-mark">M</div>
-        <div><strong>MAJESTIK ENVOL</strong><span>Construire. Transporter. Avancer.</span></div>
+      <section class="section showcase">
+        <div class="container showcase-grid">
+          <div class="showcase-photo reveal">
+            <div class="photo-overlay">
+              <span>Approvisionnement</span>
+              <h3>Les bons matériaux, au bon moment.</h3>
+            </div>
+          </div>
+          <div class="showcase-copy reveal">
+            <span class="eyebrow">Performance terrain</span>
+            <h2>Une offre construite autour de vos délais.</h2>
+            <p>
+              Majestik Envol centralise plusieurs besoins essentiels afin de
+              simplifier vos achats et vos opérations logistiques.
+            </p>
+            <ul class="check-list">
+              <li>Disponibilité et sélection de produits utiles</li>
+              <li>Solutions adaptées aux contraintes des chantiers</li>
+              <li>Interlocuteur unique pour gagner en efficacité</li>
+            </ul>
+            <a href="#contact" class="text-link">Parler à notre équipe →</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section request-section" id="demande">
+        <div class="container request-grid">
+          <div class="request-copy">
+            <span class="eyebrow">Demande Majestik</span>
+            <h2>Décrivez le besoin. Nous préparons la mise en relation.</h2>
+            <p>
+              Cette première version fonctionne sans base de données. Le
+              formulaire construit déjà le futur objet API.
+            </p>
+          </div>
+          <form class="request-form" data-request-form>
+            <label
+              >Besoin<input
+                name="need"
+                required
+                placeholder="Ex. maçon pour rénovation"
+            /></label>
+            <div class="form-row">
+              <label
+                >Catégorie<select name="category" required>
+                  <option value="prestataire">Prestataire</option>
+                  <option value="matériau">Matériau</option>
+                  <option value="engin">Engin</option>
+                </select></label
+              ><label
+                >Zone<input name="location" required placeholder="Ex. Cocody"
+              /></label>
+            </div>
+            <div class="form-row">
+              <label>Date souhaitée<input type="date" name="date" /></label
+              ><label
+                >Budget indicatif<input
+                  name="budget"
+                  placeholder="Ex. 250 000 FCFA"
+              /></label>
+            </div>
+            <label
+              >Détails<textarea
+                name="details"
+                rows="4"
+                placeholder="Quantité, dimensions, contraintes du chantier…"
+              ></textarea>
+            </label>
+            <label
+              >Contact<input
+                name="contact"
+                required
+                placeholder="Téléphone / WhatsApp"
+            /></label>
+            <button class="btn btn-primary" type="submit">
+              Préparer ma demande
+            </button>
+            <div class="request-output" data-request-output hidden></div>
+          </form>
+        </div>
+      </section>
+      <section class="partner-section" id="partenaire">
+        <div class="container partner-box">
+          <div>
+            <span class="eyebrow light">Vous travaillez dans le BTP ?</span>
+            <h2>Rejoignez le réseau Majestik.</h2>
+            <p>
+              Artisans, équipes terrain, fournisseurs, transporteurs et
+              propriétaires d’engins peuvent rejoindre progressivement notre
+              réseau de partenaires.
+            </p>
+          </div>
+          <a class="btn btn-light" href="#contact">Devenir partenaire</a>
+        </div>
+      </section>
+
+      <section class="section advantages" id="avantages">
+        <div class="container">
+          <div class="section-heading center reveal">
+            <span class="eyebrow">Pourquoi Majestik Envol</span>
+            <h2>Une approche professionnelle, claire et efficace.</h2>
+          </div>
+          <div class="adv-grid">
+            <div class="adv-card reveal">
+              <strong>01</strong>
+              <h3>Qualité</h3>
+              <p>Une sélection attentive des matériaux et services proposés.</p>
+            </div>
+            <div class="adv-card reveal">
+              <strong>02</strong>
+              <h3>Prix compétitifs</h3>
+              <p>Une recherche constante du bon rapport qualité-prix.</p>
+            </div>
+            <div class="adv-card reveal">
+              <strong>03</strong>
+              <h3>Proximité</h3>
+              <p>Des échanges directs et un accompagnement simple.</p>
+            </div>
+            <div class="adv-card reveal">
+              <strong>04</strong>
+              <h3>Souplesse</h3>
+              <p>
+                Des solutions adaptées à la taille et au rythme de vos projets.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contact">
+        <div class="container contact-grid">
+          <div class="contact-copy reveal">
+            <span class="eyebrow light">Un besoin ?</span>
+            <h2>Parlons de votre prochain chantier.</h2>
+            <p>
+              Contactez Majestik Envol pour vos besoins en matériaux,
+              logistique, quincaillerie ou location.
+            </p>
+          </div>
+          <div class="contact-card reveal">
+            <a href="tel:+2250708202226">+225 07 08 20 22 26</a>
+            <a href="tel:+2250708203010">+225 07 08 20 30 10</a>
+            <a href="tel:+2250544577666">+225 05 44 57 76 66</a>
+            <a
+              class="btn btn-light"
+              href="https://wa.me/2250708202226"
+              target="_blank"
+              rel="noopener"
+              >Écrire sur WhatsApp</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div
+      class="fleet-modal"
+      data-fleet-modal
+      hidden
+      role="dialog"
+      aria-modal="true"
+      aria-label="Détail de l’engin"
+    >
+      <div class="fleet-dialog">
+        <button
+          type="button"
+          class="fleet-close"
+          data-modal-close
+          aria-label="Fermer"
+        >
+          ×
+        </button>
+        <div data-modal-content></div>
       </div>
-      <p>© <span id="year"></span> Majestik Envol. Tous droits réservés.</p>
     </div>
-  </footer>
 
-  <script src="assets/js/main.js"></script>
-  <script src="assets/js/fleet.js"></script>
-  <script src="assets/js/marketplace.js"></script>
-</body>
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="brand footer-brand">
+          <div class="brand-mark">M</div>
+          <div>
+            <strong>MAJESTIK ENVOL</strong
+            ><span>Construire. Transporter. Avancer.</span>
+          </div>
+        </div>
+        <p>© <span id="year"></span> Majestik Envol. Tous droits réservés.</p>
+      </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/fleet.js"></script>
+    <script src="assets/js/marketplace.js"></script>
+  </body>
 </html>
