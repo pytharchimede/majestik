@@ -15,3 +15,15 @@
  const out=form.querySelector('[data-request-output]');
  form.addEventListener('submit',e=>{e.preventDefault();const fd=new FormData(form),obj=Object.fromEntries(fd.entries());obj.reference='ME-REQ-'+Date.now().toString().slice(-8);obj.status='draft';obj.createdAt=new Date().toISOString();out.hidden=false;out.innerHTML='<strong>Demande préparée : '+obj.reference+'</strong><span>Majestik pourra transmettre ce même objet JSON à la future API. Pour cette version sans backend, aucune donnée n’est envoyée.</span><pre>'+JSON.stringify(obj,null,2)+'</pre>';});
 })();
+(() => {
+ const box=document.querySelector('[data-quick-search]'); if(!box)return;
+ const input=box.querySelector('[data-quick-search-input]'), results=box.querySelector('[data-quick-search-results]'); let data=[];
+ const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));
+ const open=()=>{box.hidden=false;document.body.classList.add('quick-search-open');setTimeout(()=>input.focus(),20);};
+ const close=()=>{box.hidden=true;document.body.classList.remove('quick-search-open');input.value='';results.innerHTML='<p>Commencez à saisir votre besoin.</p>';};
+ document.querySelector('[data-quick-search-open]')?.addEventListener('click',open);box.querySelectorAll('[data-quick-search-close]').forEach(x=>x.addEventListener('click',close));
+ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!box.hidden)close();if(e.key==='/'&&box.hidden&&!/INPUT|TEXTAREA|SELECT/.test(document.activeElement.tagName)){e.preventDefault();open();}});
+ Promise.all([fetch('data/providers.json').then(r=>r.json()),fetch('data/materials.json').then(r=>r.json()),fetch('data/equipment.json').then(r=>r.json())]).then(([p,m,e])=>{data=[...(p.items||[]).map(x=>({...x,kind:'prestataire'})),...(m.items||[]).map(x=>({...x,kind:'matériau'})),...(e.items||[]).map(x=>({...x,kind:'engin'}))];});
+ input.addEventListener('input',()=>{const q=input.value.trim().toLowerCase();if(!q){results.innerHTML='<p>Commencez à saisir votre besoin.</p>';return;}const rows=data.filter(x=>[x.name,x.category,x.location,x.area,x.use,...(x.services||[])].join(' ').toLowerCase().includes(q)).slice(0,10);results.innerHTML=rows.length?rows.map(x=>'<button type="button" class="quick-result" data-quick-id="'+esc(x.id)+'" data-quick-name="'+esc(x.name)+'" data-quick-kind="'+esc(x.kind)+'"><span><strong>'+esc(x.name)+'</strong><small>'+esc(x.category||x.use||'BTP')+(x.area?' · '+esc(x.area):'')+'</small></span><span class="quick-kind">'+esc(x.kind)+'</span></button>').join(''):'<p>Aucun résultat. Vous pouvez décrire directement votre besoin à Majestik.</p>';});
+ results.addEventListener('click',e=>{const b=e.target.closest('[data-quick-id]');if(!b)return;const market=document.querySelector('[data-marketplace]'),mi=market?.querySelector('[data-market-search]'),mt=market?.querySelector('[data-market-type]');if(mi)mi.value=b.dataset.quickName;if(mt)mt.value=b.dataset.quickKind;close();mi?.dispatchEvent(new Event('input',{bubbles:true}));market?.scrollIntoView({behavior:'smooth',block:'start'});});
+})();
