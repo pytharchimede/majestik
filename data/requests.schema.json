@@ -1,0 +1,55 @@
+{
+  "title": "Majestik service request",
+  "type": "object",
+  "required": [
+    "need",
+    "category",
+    "location",
+    "contact"
+  ],
+  "properties": {
+    "reference": {
+      "type": "string"
+    },
+    "need": {
+      "type": "string"
+    },
+    "category": {
+      "enum": [
+        "prestataire",
+        "matériau",
+        "engin"
+      ]
+    },
+    "location": {
+      "type": "string"
+    },
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+    "budget": {
+      "type": "string"
+    },
+    "details": {
+      "type": "string"
+    },
+    "contact": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "draft",
+        "submitted",
+        "matched",
+        "accepted",
+        "completed",
+        "cancelled"
+      ]
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

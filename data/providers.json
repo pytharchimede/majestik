@@ -1,0 +1,111 @@
+{
+  "meta": {
+    "version": "1.0",
+    "resource": "providers",
+    "futureApi": "/api/v1/providers"
+  },
+  "items": [
+    {
+      "id": "ME-PRO-001",
+      "name": "Équipe Maçonnerie Koumassi",
+      "type": "prestataire",
+      "category": "Maçonnerie",
+      "location": "Abidjan",
+      "area": "Koumassi",
+      "verified": true,
+      "rating": 4.8,
+      "jobs": 36,
+      "services": [
+        "Maçonnerie",
+        "Gros œuvre",
+        "Crépi"
+      ],
+      "availability": "available"
+    },
+    {
+      "id": "ME-PRO-002",
+      "name": "Atelier Soudure Pro",
+      "type": "prestataire",
+      "category": "Soudure",
+      "location": "Abidjan",
+      "area": "Marcory",
+      "verified": true,
+      "rating": 4.7,
+      "jobs": 24,
+      "services": [
+        "Soudure",
+        "Portails",
+        "Charpente métallique"
+      ],
+      "availability": "available"
+    },
+    {
+      "id": "ME-PRO-003",
+      "name": "Élec Bâtiment Services",
+      "type": "prestataire",
+      "category": "Électricité",
+      "location": "Abidjan",
+      "area": "Treichville",
+      "verified": true,
+      "rating": 4.6,
+      "jobs": 18,
+      "services": [
+        "Installation électrique",
+        "Dépannage",
+        "Câblage"
+      ],
+      "availability": "on-request"
+    },
+    {
+      "id": "ME-PRO-004",
+      "name": "Plomberie Express",
+      "type": "prestataire",
+      "category": "Plomberie",
+      "location": "Abidjan",
+      "area": "Cocody",
+      "verified": false,
+      "rating": 4.5,
+      "jobs": 12,
+      "services": [
+        "Plomberie",
+        "Sanitaire",
+        "Dépannage"
+      ],
+      "availability": "available"
+    },
+    {
+      "id": "ME-PRO-005",
+      "name": "Finition & Couleurs",
+      "type": "prestataire",
+      "category": "Peinture",
+      "location": "Abidjan",
+      "area": "Yopougon",
+      "verified": true,
+      "rating": 4.9,
+      "jobs": 29,
+      "services": [
+        "Peinture",
+        "Enduit",
+        "Finitions"
+      ],
+      "availability": "available"
+    },
+    {
+      "id": "ME-PRO-006",
+      "name": "Carrelage Design CI",
+      "type": "prestataire",
+      "category": "Carrelage",
+      "location": "Abidjan",
+      "area": "Port-Bouët",
+      "verified": true,
+      "rating": 4.7,
+      "jobs": 21,
+      "services": [
+        "Carrelage",
+        "Faïence",
+        "Revêtement"
+      ],
+      "availability": "available"
+    }
+  ]
+}

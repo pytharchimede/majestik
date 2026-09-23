@@ -1,0 +1,54 @@
+{
+  "meta": {
+    "version": "1.0",
+    "resource": "materials",
+    "futureApi": "/api/v1/materials"
+  },
+  "items": [
+    {
+      "id": "ME-MAT-001",
+      "name": "Ciment",
+      "category": "Gros œuvre",
+      "unit": "sac",
+      "availability": "available",
+      "providerCount": 5,
+      "location": "Abidjan"
+    },
+    {
+      "id": "ME-MAT-002",
+      "name": "Fer à béton",
+      "category": "Gros œuvre",
+      "unit": "barre",
+      "availability": "available",
+      "providerCount": 4,
+      "location": "Abidjan"
+    },
+    {
+      "id": "ME-MAT-003",
+      "name": "Sable",
+      "category": "Agrégats",
+      "unit": "chargement",
+      "availability": "on-request",
+      "providerCount": 3,
+      "location": "Abidjan"
+    },
+    {
+      "id": "ME-MAT-004",
+      "name": "Gravier",
+      "category": "Agrégats",
+      "unit": "chargement",
+      "availability": "available",
+      "providerCount": 3,
+      "location": "Abidjan"
+    },
+    {
+      "id": "ME-MAT-005",
+      "name": "Quincaillerie",
+      "category": "Second œuvre",
+      "unit": "article",
+      "availability": "available",
+      "providerCount": 6,
+      "location": "Abidjan"
+    }
+  ]
+}
