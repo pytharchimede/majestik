@@ -1,0 +1,29 @@
+{
+  "meta": {
+    "version": "1.0",
+    "resource": "equipment-categories",
+    "futureApi": "/api/v1/equipment/categories"
+  },
+  "items": [
+    {
+      "id": "all",
+      "label": "Tous les engins"
+    },
+    {
+      "id": "Terrassement",
+      "label": "Terrassement"
+    },
+    {
+      "id": "Manutention",
+      "label": "Manutention"
+    },
+    {
+      "id": "Levage",
+      "label": "Levage"
+    },
+    {
+      "id": "Transport",
+      "label": "Transport"
+    }
+  ]
+}
