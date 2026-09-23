@@ -24,7 +24,7 @@
       <nav class="main-nav">
         <a href="#services">Services</a>
         <a href="#apropos">À propos</a>
-        <a href="#avantages">Pourquoi nous</a>
+        <a href="#parc">Parc engins</a>\n        <a href="#avantages">Pourquoi nous</a>
         <a href="#contact" class="nav-cta">Nous contacter</a>
       </nav>
     </div>
@@ -118,6 +118,22 @@
       </div>
     </section>
 
+    <section class="section fleet-section" id="parc" data-fleet>
+      <div class="container">
+        <div class="section-heading center reveal">
+          <span class="eyebrow">Parc engins</span>
+          <h2>Explorez nos équipements.</h2>
+          <p>Recherchez, filtrez et consultez les équipements disponibles. Cette interface est déjà structurée pour être raccordée à une future API.</p>
+        </div>
+        <div class="fleet-toolbar">
+          <div class="fleet-filters" data-fleet-filters aria-label="Filtrer le parc"></div>
+          <label class="fleet-search"><input type="search" data-fleet-search placeholder="Rechercher un engin…" aria-label="Rechercher un engin"></label>
+        </div>
+        <div class="fleet-summary"><span data-fleet-count>Chargement du parc…</span><span>Données JSON · Catalogue dynamique</span></div>
+        <div class="fleet-grid" data-fleet-grid aria-live="polite"></div>
+      </div>
+    </section>
+
     <section class="section showcase">
       <div class="container showcase-grid">
         <div class="showcase-photo reveal">
@@ -172,7 +188,7 @@
     </section>
   </main>
 
-  <footer class="site-footer">
+  <div class="fleet-modal" data-fleet-modal hidden role="dialog" aria-modal="true" aria-label="Détail de l’engin"><div class="fleet-dialog"><button type="button" class="fleet-close" data-modal-close aria-label="Fermer">×</button><div data-modal-content></div></div></div>\n\n  <footer class="site-footer">
     <div class="container footer-grid">
       <div class="brand footer-brand">
         <div class="brand-mark">M</div>
@@ -182,6 +198,6 @@
     </div>
   </footer>
 
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js"></script>\n  <script src="assets/js/fleet.js"></script>
 </body>
 </html>
